@@ -3,7 +3,7 @@ library(tidyverse)
 
 source("functions.R")
 
-link <- 'https://docs.google.com/spreadsheets/d/1_aGrSiv5qiCJspolYxbyc2Ta-NMrU-bmKhBAclFdHTs/edit?gid=96325893#gid=96325893'
+link <- 'my_google_sheets_file'
 tourney_info <- read_sheet(link, sheet = "Teams List", range = "A2:D") 
 pools <- unique(tourney_info$Pool)
 max_games <- as.numeric(colnames(tourney_info)[4])
